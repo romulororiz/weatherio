@@ -7,7 +7,7 @@ import { typeDefs } from './schema/TypeDefs.js';
 import cors from 'cors';
 import Dotenv from 'dotenv/config';
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 

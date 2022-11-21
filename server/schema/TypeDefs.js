@@ -3,7 +3,7 @@ import { gql } from 'graphql-tag';
 export const typeDefs = gql`
 	# Queries
 	type Query {
-		CityWeather(name: String, cnt: Int): Weather!
+		CityWeather(name: String, cnt: Int, countryCode: String): Weather!
 	}
 
 	# Types

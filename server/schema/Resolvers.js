@@ -9,5 +9,11 @@ export const resolvers = {
 
 			return res.data;
 		},
+		async CurrentWeather(_root, { lat, lon }) {
+			const res = await axios.get(
+				`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`
+			);
+			return res.data;
+		},
 	},
 };

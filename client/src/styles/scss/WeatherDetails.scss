@@ -1,0 +1,36 @@
+@import 'mixins';
+
+.weather-details {
+	color: #b9b8b8;
+
+	h3 {
+		margin-top: 25px;
+		color: #ebeaea;
+		font-weight: 400;
+	}
+
+	.weather-info {
+		margin-top: 25px;
+	}
+
+	.weather-info-item {
+		display: flex;
+		margin: 20px 0;
+		justify-content: space-between;
+	}
+
+	.sunrise-sunset-wrapper {
+		margin-top: 35px;
+		display: flex;
+		justify-content: space-around;
+
+		.icon {
+			fill: #b9b8b8;
+		}
+
+		.time {
+			width: fit-content;
+			height: fit-content;
+		}
+	}
+}

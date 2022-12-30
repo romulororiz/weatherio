@@ -1,0 +1,32 @@
+.weather-details {
+  color: #b9b8b8;
+}
+.weather-details h3 {
+  margin-top: 25px;
+  color: #ebeaea;
+  font-weight: 400;
+}
+.weather-details .weather-info {
+  margin-top: 25px;
+}
+.weather-details .weather-info-item {
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+.weather-details .sunrise-sunset-wrapper {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-around;
+}
+.weather-details .sunrise-sunset-wrapper .icon {
+  fill: #b9b8b8;
+}
+.weather-details .sunrise-sunset-wrapper .time {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}

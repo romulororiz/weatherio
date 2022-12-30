@@ -1,0 +1,167 @@
+.dashboard-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.dashboard-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.dashboard-wrapper .dashboard-main {
+  width: 70%;
+  height: 80%;
+  display: flex;
+  box-shadow: 1px 3px 25px rgba(0, 0, 0, 0.563);
+  z-index: 1;
+  border-radius: 4px;
+  position: relative;
+}
+.dashboard-wrapper .dashboard-main::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+  z-index: -1;
+}
+.dashboard-wrapper .dashboard-main .left-side {
+  width: 70%;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+  position: relative;
+}
+.dashboard-wrapper .dashboard-main .left-side .icon {
+  position: absolute;
+  right: 25px;
+  top: 45px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.dashboard-wrapper .dashboard-main .left-side .locating {
+  position: absolute;
+  bottom: 100px;
+  left: 150px;
+  font-size: 32px;
+}
+.dashboard-wrapper .dashboard-main .left-side .temp-wrapper {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  margin-bottom: 60px;
+  margin-left: 100px;
+  display: flex;
+  position: relative;
+}
+.dashboard-wrapper .dashboard-main .left-side .temp-wrapper .converter-wrapper {
+  position: absolute;
+}
+.dashboard-wrapper .dashboard-main .left-side .temp-wrapper .switch-button {
+  background: rgba(235, 234, 234, 0.4784313725);
+  border-radius: 30px;
+  overflow: hidden;
+  width: 50px;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #155fff;
+  position: relative;
+  padding-right: 50px;
+}
+.dashboard-wrapper .dashboard-main .left-side .temp-wrapper .switch-button:before {
+  content: "F";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  pointer-events: none;
+}
+.dashboard-wrapper .dashboard-main .left-side .temp-wrapper .switch-button-checkbox {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+}
+.dashboard-wrapper .dashboard-main .left-side .temp-wrapper .switch-button-checkbox:checked + .switch-button-label:before {
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  transition: -webkit-transform 300ms linear;
+  transition: transform 300ms linear;
+  transition: transform 300ms linear, -webkit-transform 300ms linear;
+}
+.dashboard-wrapper .dashboard-main .left-side .temp-wrapper .switch-button-checkbox + .switch-button-label {
+  position: relative;
+  padding: 5px 0;
+  display: block;
+  -webkit-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+.dashboard-wrapper .dashboard-main .left-side .temp-wrapper .switch-button-checkbox + .switch-button-label:before {
+  content: "";
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+}
+.dashboard-wrapper .dashboard-main .left-side .temp-wrapper .switch-button-checkbox + .switch-button-label .switch-button-label-span {
+  position: relative;
+}
+.dashboard-wrapper .dashboard-main .left-side .temp {
+  padding: 10px;
+  font-size: 44px;
+}
+.dashboard-wrapper .dashboard-main .left-side .temp span {
+  position: relative;
+  left: -4px;
+  bottom: 16px;
+  font-size: 25px;
+  right: 25px;
+}
+.dashboard-wrapper .dashboard-main .left-side .location {
+  padding: 10px;
+  margin-left: 135px;
+}
+.dashboard-wrapper .dashboard-main .left-side .location p {
+  font-size: 34px;
+}
+.dashboard-wrapper .dashboard-main .left-side .icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 15px;
+  position: relative;
+  bottom: 30px;
+}
+.dashboard-wrapper .dashboard-main .left-side .icon-wrapper span {
+  text-align: center;
+}
+.dashboard-wrapper .error {
+  z-index: 1;
+}
+.dashboard-wrapper .error h2 {
+  font-weight: 300;
+}

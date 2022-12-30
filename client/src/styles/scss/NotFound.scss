@@ -1,0 +1,16 @@
+.not-found {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	h1 {
+		font-weight: 300;
+
+        .icon {
+            color: rgb(201, 201, 5);
+            position: relative;
+            top: 3px;
+        }
+	}
+}

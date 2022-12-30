@@ -8,7 +8,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "node server/index.js",
+		"start": "node server/server.js",
 		"server": "nodemon --ext js,graphql --ignore data/ server/server.js",
 		"client": "npm start --prefix client",
 		"dev": "concurrently \"npm run server\" \"npm run client\"",

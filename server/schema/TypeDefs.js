@@ -3,7 +3,7 @@ import { gql } from 'graphql-tag';
 export const typeDefs = gql`
 	# Queries
 	type Query {
-		CityWeather(name: String!, cnt: Int, countryCode: String): ForecastWeather!
+		CityWeather(name: String, cnt: Int, countryCode: String): ForecastWeather!
 		CurrentWeather(lat: Float!, lon: Float!): CurrentWeather!
 	}
 
@@ -14,10 +14,12 @@ export const typeDefs = gql`
 		weather: [WeatherType!]!
 		main: WeatherMain!
 		visibility: Int!
+		clouds: Clouds!
 		wind: Wind!
 		dt: Int!
 		sys: Sys!
 		name: String!
+		timezone: Int!
 	}
 
 	type Coord {
@@ -41,6 +43,10 @@ export const typeDefs = gql`
 		humidity: Float!
 	}
 
+	type Clouds {
+		all: Int!
+	}
+
 	type Wind {
 		speed: Float!
 	}
@@ -62,6 +68,7 @@ export const typeDefs = gql`
 		dt: Int!
 		main: ForecastWeatherMain!
 		weather: [ForecastWeatherType]!
+		clouds: ForecastClouds!
 		wind: ForecastWind!
 		visibility: Int!
 		dt_txt: String!
@@ -83,6 +90,10 @@ export const typeDefs = gql`
 		icon: String!
 	}
 
+	type ForecastClouds {
+		all: Int!
+	}
+
 	type ForecastWind {
 		speed: Float!
 	}
@@ -93,5 +104,6 @@ export const typeDefs = gql`
 		country: String!
 		sunrise: Int!
 		sunset: Int!
+		timezone: Int!
 	}
 `;

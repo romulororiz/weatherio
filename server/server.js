@@ -28,13 +28,15 @@ await server.start();
 app.use(cors(), express.json(), express.urlencoded({ extended: true }));
 app.use('/graphql', expressMiddleware(server));
 
-// Serve frontend
-// Set build folder as static
-app.use(express.static(path.join(__dirname, '../client/build')));
+if (process.env.NODE_ENV === 'production') {
+	// Serve frontend
+	// Set build folder as static
+	app.use(express.static(path.join(__dirname, '../client/build')));
 
-app.get('*', (req, res) => {
-	res.sendFile(path.resolve(__dirname, '../client/build/index.html'));
-});
+	app.get('*', (req, res) => {
+		res.sendFile(path.resolve(__dirname, '../client/build/index.html'));
+	});
+}
 
 // Modified server startup
 await new Promise(resolve => httpServer.listen({ port: PORT }, resolve));
